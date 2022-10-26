@@ -3,10 +3,16 @@
 #### 介绍
 基于 springboot 实现微信扫描小程序码登录，获取用户微信信息 ，封装了对于access_token，获取小程序码的过程。可以直接使用接口
 
+#### 需求分析
+
+业务场景：
+    1、我们需要在网站使用登录功能来进行鉴权，如网站有  **个人中心**  或  **我的**  相关内容
+    2、需要同步关联  **网站用户内容**  和  **微信小程序用户**  的需求。即用户在不同的客户端登录同步数据
+
 #### 技术栈使用
-基于 springboot 搭建服务
-持久层使用 mybatis-plus
-请求使用 httpclient 发送请求
+基于  **springboot ** 搭建服务
+持久层使用  **mybatis-plus** 
+请求使用  **httpclient ** 发送请求
 
 #### 使用前置
 
@@ -14,11 +20,9 @@
 2.  需要搭建与实体类 Login.java 和 User.java 相同子段的数据库表（可拓展）
 3.  编写小程序认证界面，可按需求自定义编写，小程序相关 js 编写模板见  **src/static/oauth.js**  文件
 
-![输入图片说明](https://img-blog.csdnimg.cn/736fcb8bec0844dba1b9d5f6184c5e27.jpeg)
-
 #### 操作流程
 
-微信扫码登录时序图
+ **微信扫码登录时序图** 
 
 ![输入图片说明](https://img-blog.csdnimg.cn/0ccd087583164d5f88ea9acfcc5c98ab.png)
 
