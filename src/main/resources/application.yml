@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+
+file:
+  # 图片保存地址
+  qrcode: D://
