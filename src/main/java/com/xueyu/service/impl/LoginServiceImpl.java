@@ -9,7 +9,6 @@ import com.xueyu.pojo.dto.Login;
 import com.xueyu.service.LoginService;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -95,21 +94,11 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, Login> implements
 	}
 
 	/**
-	 * @param instreams 二进制流
-	 * @param fileName 图片的名称
-	 * @return str 图片保存地址
-	 */
-	private void saveToImgByInputStream(InputStream instreams, String fileName){
-		if(instreams != null){
-			boolean b =uploadImages(instreams, filepath, fileName+".jpg");
-		}
-	}
-
-	/**
 	 * IO流保存图片
+	 *
 	 * @param instreams 需要保存的流
 	 * @param imagePath 保存的图片路径
-	 * @param fileName 文件名
+	 * @param fileName  文件名
 	 * @return 保存状态
 	 */
 	private static boolean uploadImages( InputStream instreams,String imagePath,String fileName) {
@@ -149,8 +138,21 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, Login> implements
 	}
 
 	/**
-	 *  请求
-	 * @param url 请求地址
+	 * 通过流保存图片
+	 *
+	 * @param instreams 二进制流
+	 * @param fileName  图片的名称
+	 */
+	private void saveToImgByInputStream(InputStream instreams, String fileName) {
+		if (instreams != null) {
+			boolean b = uploadImages(instreams, filepath, fileName + ".jpg");
+		}
+	}
+
+	/**
+	 * 请求
+	 *
+	 * @param url       请求地址
 	 * @param jsonParam 请求参数
 	 * @return 响应流
 	 */

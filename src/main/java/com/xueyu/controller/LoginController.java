@@ -9,7 +9,10 @@ import com.xueyu.service.UserService;
 import com.xueyu.utils.FileManage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author durance
@@ -36,7 +39,9 @@ public class LoginController {
 	}
 
 	/**
-	 *  修改扫码状态为 已扫码
+	 * 修改扫码状态为 已扫码
+	 *
+	 * @param login 登录信息
 	 */
 	@PostMapping("scan")
 	public void userScanQrcode(Login login){
@@ -48,6 +53,7 @@ public class LoginController {
 
 	/**
 	 * 用户点击确认
+	 *
 	 * @param user 执行的用户
 	 * @param login 登录信息
 	 */
@@ -68,6 +74,7 @@ public class LoginController {
 
 	/**
 	 * 用户取消认证
+	 *
 	 * @param scene 场景值
 	 */
 	@PostMapping("cancel")
@@ -82,6 +89,8 @@ public class LoginController {
 
 	/**
 	 * 用户点击同意后 或 超时后，浏览器发送请求删除该项数据
+	 *
+	 * @param scene 场景值
 	 */
 	@PostMapping("delete/scene")
 	public void delete(String scene){
@@ -95,6 +104,8 @@ public class LoginController {
 
 	/**
 	 * 浏览器查询 当前二维码状态
+	 *
+	 * @param scene 场景值
 	 */
 	@GetMapping("login/status")
 	public Login getLoginStatus(String scene){
@@ -105,6 +116,7 @@ public class LoginController {
 
 	/**
 	 * 添加用户
+	 *
 	 * @param user 用户信息
 	 */
 	private void getUserInfo(User user){
