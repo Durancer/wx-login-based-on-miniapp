@@ -32,6 +32,8 @@ public class LoginController {
 
 	/**
 	 * 创建 login 数据
+	 *
+	 * @return 文件名
 	 */
 	@PostMapping("create")
 	public String createUserLogin(){
@@ -106,6 +108,7 @@ public class LoginController {
 	 * 浏览器查询 当前二维码状态
 	 *
 	 * @param scene 场景值
+	 * @return 登录状态
 	 */
 	@GetMapping("login/status")
 	public Login getLoginStatus(String scene){

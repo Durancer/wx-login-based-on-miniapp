@@ -1,6 +1,7 @@
 package com.xueyu.pojo.dto;
 
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,21 +19,22 @@ public class User {
     /**
      * 用户id
      */
-    private Integer id;
+    @TableId
+    Integer id;
 
     /**
      * 用户名
      */
-    private String nickname;
+    String nickname;
 
     /**
      * 用户唯一标识
      */
-    private String openid;
+    String openid;
 
     /**
      * 用户头像
      */
-    private String avatar;
+    String avatar;
 
 }

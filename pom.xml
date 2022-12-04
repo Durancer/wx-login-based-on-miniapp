@@ -27,6 +27,7 @@
 			<version>4.5.3</version>
 		</dependency>
 
+		<!--json数据转化-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
@@ -56,6 +57,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.29</version>
 		</dependency>
+
 		<!--mybatisplus起步依赖-->
 		<dependency>
 			<groupId>com.baomidou</groupId>

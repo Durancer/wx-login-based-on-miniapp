@@ -150,7 +150,7 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, Login> implements
 	}
 
 	/**
-	 * 请求
+	 * 发送post请求
 	 *
 	 * @param url       请求地址
 	 * @param jsonParam 请求参数

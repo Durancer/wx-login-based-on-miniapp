@@ -1,5 +1,6 @@
 package com.xueyu.pojo.dto;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,21 +20,22 @@ public class Login {
 	/**
 	 * 自增id
 	 */
-	private Integer id;
+	@TableId
+	Integer id;
 
 	/**
 	 * 场景随机值
 	 */
-	private String scene;
+	String scene;
 
 	/**
 	 * 扫码状态
 	 */
-	private String status;
+	String status;
 
 	/**
 	 * 用户id
 	 */
-	private Integer userid;
+	Integer userid;
 
 }
