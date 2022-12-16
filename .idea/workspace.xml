@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43c077bf-5682-41d4-b17a-88603af2e5bf" name="Default Changelist" comment="修改注释规范">
+    <list default="true" id="43c077bf-5682-41d4-b17a-88603af2e5bf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/LoginApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/LoginApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/pojo/dto/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/pojo/dto/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/pojo/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/pojo/dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/utils/FileManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/utils/FileManage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +31,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2GeUXq7miFJnCNeRdtTQbJv3xyl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/xueyu/service/impl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,6 +58,7 @@
       <recent name="com.xueyu.pojo.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaProject\Wx-login\src\main\resources\static" />
       <recent name="D:\javaProject\Wx-login\src\main\java\com\xueyu\service\impl" />
       <recent name="D:\javaProject\Wx-login\src\main\java\com\xueyu\service" />
       <recent name="D:\javaProject\Wx-login\src\main\java\com\xueyu\dao" />
@@ -80,7 +77,9 @@
       <workItem from="1666748589264" duration="3321000" />
       <workItem from="1668162203817" duration="1095000" />
       <workItem from="1668223567765" duration="10000" />
-      <workItem from="1670164314005" duration="656000" />
+      <workItem from="1670164314005" duration="690000" />
+      <workItem from="1670211769706" duration="9000" />
+      <workItem from="1671197288057" duration="1612000" />
     </task>
     <task id="LOCAL-00001" summary="修改注释规范">
       <created>1668162555837</created>
@@ -89,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668162555837</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="修改注释规范">
+      <created>1670164983262</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670164983262</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,14 +109,18 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="372" y="2" key="CommitChangelistDialog2" timestamp="1668162663820">
+    <state x="506" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1671197363466">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1668162663820" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1668162699234">
+    <state x="506" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1671197363466" />
+    <state x="372" y="2" key="CommitChangelistDialog2" timestamp="1670164981953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1668162699234" />
+    <state x="372" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1670164981953" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1670164994064">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1670164994064" />
     <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1668162657304">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
