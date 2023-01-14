@@ -1,6 +1,7 @@
 package com.xueyu.constant;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 /**
  * 登录扫码状态
@@ -8,6 +9,7 @@ import lombok.AllArgsConstructor;
  * @author durance
  */
 @AllArgsConstructor
+@Getter
 public enum ScanStatus {
 
 	/**

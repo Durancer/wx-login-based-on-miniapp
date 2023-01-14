@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.util.UUID;
 
 /**
+ * 文件管理工具
+ *
  * @author durance
  */
 public class FileManage {

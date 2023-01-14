@@ -1,7 +1,7 @@
 package com.xueyu.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.xueyu.constant.WxLoginContant;
+import com.xueyu.constant.ScanStatus;
 import com.xueyu.pojo.dto.Login;
 import com.xueyu.pojo.dto.User;
 import com.xueyu.service.LoginService;
@@ -46,11 +46,11 @@ public class LoginController {
 	 * @param login 登录信息
 	 */
 	@PostMapping("scan")
-	public void userScanQrcode(Login login){
-		login.setStatus(WxLoginContant.STATUS_ING);
+	public void userScanQrcode(Login login) {
+		login.setStatus(ScanStatus.ING.getStatus());
 		QueryWrapper<Login> wrapper = new QueryWrapper<>();
-		wrapper.eq("scene",login.getScene());
-		loginService.update(login,wrapper);
+		wrapper.eq("scene", login.getScene());
+		loginService.update(login, wrapper);
 	}
 
 	/**
@@ -60,18 +60,18 @@ public class LoginController {
 	 * @param login 登录信息
 	 */
 	@PostMapping("auth")
-	public void userAuthWebPro(User user, Login login){
+	public void userAuthWebPro(User user, Login login) {
 		// 更新/添加 用户信息
 		getUserInfo(user);
 		QueryWrapper<User> wrapper = new QueryWrapper<>();
 		wrapper.eq("openid", user.getOpenid());
 		User one = userService.getOne(wrapper);
 		// 更改 扫码状态
-		login.setStatus(WxLoginContant.STATUS_SUCCESS);
+		login.setStatus(ScanStatus.SUCCESS.getStatus());
 		login.setUserid(one.getId());
 		QueryWrapper<Login> wrapper1 = new QueryWrapper<>();
-		wrapper1.eq("scene",login.getScene());
-		loginService.update(login,wrapper1);
+		wrapper1.eq("scene", login.getScene());
+		loginService.update(login, wrapper1);
 	}
 
 	/**
@@ -80,13 +80,13 @@ public class LoginController {
 	 * @param scene 场景值
 	 */
 	@PostMapping("cancel")
-	public void userCancelAuth(String scene){
+	public void userCancelAuth(String scene) {
 		// 修改状态为 cancel
 		Login login = new Login();
-		login.setStatus(WxLoginContant.STATUS_CANCEL);
+		login.setStatus(ScanStatus.CANCEL.getStatus());
 		QueryWrapper<Login> wrapper = new QueryWrapper<>();
-		wrapper.eq("scene",scene);
-		loginService.update(login,wrapper);
+		wrapper.eq("scene", scene);
+		loginService.update(login, wrapper);
 	}
 
 	/**

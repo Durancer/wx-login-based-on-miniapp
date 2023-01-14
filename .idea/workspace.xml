@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43c077bf-5682-41d4-b17a-88603af2e5bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/ScanStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/WxLoginContant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/WxLoginContant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/ScanStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/ScanStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/utils/FileManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/utils/FileManage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,6 +68,23 @@
       <recent name="D:\javaProject\Wx-login\src\main\java\com\xueyu\dao" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Test.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Wx-login" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Test.test" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -83,7 +101,8 @@
       <workItem from="1670164314005" duration="690000" />
       <workItem from="1670211769706" duration="9000" />
       <workItem from="1671197288057" duration="2251000" />
-      <workItem from="1673621904811" duration="1476000" />
+      <workItem from="1673621904811" duration="1549000" />
+      <workItem from="1673664667114" duration="545000" />
     </task>
     <task id="LOCAL-00001" summary="修改注释规范">
       <created>1668162555837</created>
@@ -106,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671202934265</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="移出登录扫码状态位置">
+      <created>1673623720585</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673623720585</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +141,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改注释规范" />
     <MESSAGE value="增加vue扫码登录参考代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加vue扫码登录参考代码" />
+    <MESSAGE value="移出登录扫码状态位置" />
+    <option name="LAST_COMMIT_MESSAGE" value="移出登录扫码状态位置" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -125,14 +152,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="506" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1671197363466" />
-    <state x="372" y="2" key="CommitChangelistDialog2" timestamp="1671202933437">
+    <state x="372" y="2" key="CommitChangelistDialog2" timestamp="1673623719676">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1671202933437" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1671202946432">
+    <state x="372" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1673623719676" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1673665013321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1671202946432" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1673665013321" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1673665013320">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1673665013320" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1673665013320">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1673665013320" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1673665013320">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1673665013320" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1673623730031">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1673623730031" />
     <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1668162657304">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
