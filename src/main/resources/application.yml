@@ -9,3 +9,7 @@ mybatis-plus:
 file:
   # 图片保存地址
   qrcode: D://
+
+login:
+  appId: #小程序appid
+  secret: #小程序密钥
