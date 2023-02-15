@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="43c077bf-5682-41d4-b17a-88603af2e5bf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/LoginConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/WxLoginContant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/WxLoginContant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/service/impl/LoginServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +102,11 @@
       <workItem from="1671197288057" duration="2251000" />
       <workItem from="1673621904811" duration="1549000" />
       <workItem from="1673664667114" duration="623000" />
-      <workItem from="1676025312100" duration="1570000" />
+      <workItem from="1676025312100" duration="2484000" />
+      <workItem from="1676107244069" duration="29000" />
+      <workItem from="1676259083139" duration="1647000" />
+      <workItem from="1676277140114" duration="2766000" />
+      <workItem from="1676430098378" duration="2003000" />
     </task>
     <task id="LOCAL-00001" summary="修改注释规范">
       <created>1668162555837</created>
@@ -136,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673665243718</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="将小程序信息转移到配置文件里进行读取">
+      <created>1676028841216</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676028841216</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +161,8 @@
     <MESSAGE value="增加vue扫码登录参考代码" />
     <MESSAGE value="移出登录扫码状态位置" />
     <MESSAGE value="使用枚举类定义扫码状态" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用枚举类定义扫码状态" />
+    <MESSAGE value="将小程序信息转移到配置文件里进行读取" />
+    <option name="LAST_COMMIT_MESSAGE" value="将小程序信息转移到配置文件里进行读取" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -157,10 +172,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="506" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1671197363466" />
-    <state x="372" y="2" key="CommitChangelistDialog2" timestamp="1673665242853">
+    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1676444437484">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1673665242853" />
+    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1676444437484" />
+    <state x="482" y="114" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1676444464912">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="482" y="114" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1676444464912" />
+    <state x="372" y="2" key="CommitChangelistDialog2" timestamp="1676028839672">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="372" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1676028839672" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1673665290538">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -177,21 +200,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1673665290538" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1673665254129">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1676259232803">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1673665254129" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1676259232803" />
     <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1668162657304">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1668162657304" />
-    <state x="427" y="203" key="git4idea.merge.GitPullDialog" timestamp="1668162672727">
+    <state x="427" y="203" key="git4idea.merge.GitPullDialog" timestamp="1676259219172">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="427" y="203" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1668162672727" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1666749840780">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1666749840780" />
+    <state x="427" y="203" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1676259219172" />
   </component>
 </project>

@@ -59,8 +59,8 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, Login> implements
 	private String getAccessToken(){
 		RestTemplate restTemplate = new RestTemplate();
 		Map<String, String> params = new HashMap<>();
-		params.put("APPID", WxLoginContant.APPID);
-		params.put("APPSECRET", WxLoginContant.SECRET);
+		params.put("APPID", WxLoginContant.addId);
+		params.put("APPSECRET", WxLoginContant.secret);
 		ResponseEntity<String> responseEntity = restTemplate.getForEntity(
 				"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={APPID}&secret={APPSECRET}",
 				String.class, params);
