@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43c077bf-5682-41d4-b17a-88603af2e5bf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/document/login.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/LoginConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/WxLoginContant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/constant/WxLoginContant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xueyu/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xueyu/service/impl/LoginServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +44,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/document" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,6 +59,7 @@
       <recent name="com.xueyu.pojo.dto" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaProject\Wx-login\document" />
       <recent name="D:\javaProject\Wx-login\src\main\resources\static" />
       <recent name="D:\javaProject\Wx-login\src\main\java\com\xueyu\service\impl" />
       <recent name="D:\javaProject\Wx-login\src\main\java\com\xueyu\service" />
@@ -106,7 +105,8 @@
       <workItem from="1676107244069" duration="29000" />
       <workItem from="1676259083139" duration="1647000" />
       <workItem from="1676277140114" duration="2766000" />
-      <workItem from="1676430098378" duration="2003000" />
+      <workItem from="1676430098378" duration="2395000" />
+      <workItem from="1676863686920" duration="38000" />
     </task>
     <task id="LOCAL-00001" summary="修改注释规范">
       <created>1668162555837</created>
@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676028841216</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="将小程序信息转移到配置文件里进行读取">
+      <created>1676444535781</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676444535781</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,10 +187,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="482" y="114" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1536.824@0.0.1536.824" timestamp="1676444464912" />
-    <state x="372" y="2" key="CommitChangelistDialog2" timestamp="1676028839672">
+    <state x="372" y="2" key="CommitChangelistDialog2" timestamp="1676444534093">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1676028839672" />
+    <state x="372" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1676444534093" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1673665290538">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -200,10 +207,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1673665290538" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1676259232803">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1676444544643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1676259232803" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1676444544643" />
     <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1668162657304">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
