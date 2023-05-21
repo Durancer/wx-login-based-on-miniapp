@@ -13,19 +13,19 @@ public class WxLoginContant {
 	/**
 	 * 小程序appId
 	 */
-	public static String addId;
+	public static String appId;
 
 	/**
 	 * 小程序密钥
 	 */
 	public static String secret;
 
-	public static void setAddId(String addId) {
-		WxLoginContant.addId = addId;
+	public void setAppId(String APPID) {
+		appId = APPID;
 	}
 
-	public static void setSecret(String secret) {
-		WxLoginContant.secret = secret;
+	public void setSecret(String SECRET) {
+		secret = SECRET;
 	}
 
 }

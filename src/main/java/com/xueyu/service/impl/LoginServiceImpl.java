@@ -7,6 +7,7 @@ import com.xueyu.constant.WxLoginContant;
 import com.xueyu.dao.LoginMapper;
 import com.xueyu.pojo.dto.Login;
 import com.xueyu.service.LoginService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -27,46 +28,73 @@ import java.util.UUID;
 /**
  * @author durance
  */
+@Slf4j
 @Service
 public class LoginServiceImpl extends ServiceImpl<LoginMapper, Login> implements LoginService {
 
-	@Value("${buta.qrcode}")
+	@Value("${file.qrcode}")
 	private String filepath;
+
+	/**
+	 * IO流保存图片
+	 *
+	 * @param instreams 需要保存的流
+	 * @param imagePath 保存的图片路径
+	 * @param fileName  文件名
+	 * @return 保存状态
+	 */
+	private static boolean uploadImages(InputStream instreams, String imagePath, String fileName) {
+		File f = new File(imagePath);
+		f.setWritable(true, false);
+		boolean flag = false;
+		try {
+			// 1K的数据缓冲
+			byte[] bs = new byte[1024];
+			// 读取到的数据长度
+			int len;
+			// 输出的文件流
+			File file = new File(imagePath, fileName);
+			if (!file.getParentFile().exists()) {
+				file.getParentFile().mkdirs();
+				try {
+					// 创建新文件
+					file.createNewFile();
+				} catch (IOException e) {
+					log.error("创建新文件时出现了错误");
+					e.printStackTrace();
+				}
+			}
+			OutputStream os = new FileOutputStream(imagePath + File.separator + fileName);
+			// 开始读取
+			while ((len = instreams.read(bs)) != -1) {
+				os.write(bs, 0, len);
+			}
+			// 完毕，关闭所有链接
+			os.close();
+			instreams.close();
+			flag = true;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return flag;
+	}
 
 	@Override
 	public String createAndGetQrcodeFile() {
 		// 1、创建文件名及scene值
-		String scene = UUID.randomUUID().toString().substring(0,8);
+		String scene = UUID.randomUUID().toString().substring(0, 8);
 		// 2、获取token
 		String accessToken = getAccessToken();
-		System.out.println("accessToken = " + accessToken);
+		log.info("accessToken = {}", accessToken);
 		// 3、请求图片流
 		InputStream inputStream = getwxacode(accessToken, scene);
-		System.out.println("input"+inputStream);
 		// 4、保存图标文件
-		saveToImgByInputStream(inputStream,scene);
+		saveToImgByInputStream(inputStream, scene);
 		// 5、数据库增加该项数据
 		Login login = new Login();
 		login.setScene(scene);
 		save(login);
 		return scene;
-	}
-
-	/**
-	 * 获取access_token
-	 * @return access_token
-	 */
-	private String getAccessToken(){
-		RestTemplate restTemplate = new RestTemplate();
-		Map<String, String> params = new HashMap<>();
-		params.put("APPID", WxLoginContant.addId);
-		params.put("APPSECRET", WxLoginContant.secret);
-		ResponseEntity<String> responseEntity = restTemplate.getForEntity(
-				"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={APPID}&secret={APPSECRET}",
-				String.class, params);
-		String body = responseEntity.getBody();
-		JSONObject object = JSON.parseObject(body);
-		return object.getString("access_token");
 	}
 
 	/**
@@ -94,47 +122,21 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, Login> implements
 	}
 
 	/**
-	 * IO流保存图片
+	 * 获取access_token
 	 *
-	 * @param instreams 需要保存的流
-	 * @param imagePath 保存的图片路径
-	 * @param fileName  文件名
-	 * @return 保存状态
+	 * @return access_token
 	 */
-	private static boolean uploadImages( InputStream instreams,String imagePath,String fileName) {
-		File f = new File(imagePath);
-		f.setWritable(true, false);
-		boolean flag = false;
-		try {
-			// 1K的数据缓冲
-			byte[] bs = new byte[1024];
-			// 读取到的数据长度
-			int len;
-			// 输出的文件流
-			File file = new File(imagePath,fileName);
-			if (!file.getParentFile().exists()) {
-				file.getParentFile().mkdirs();
-				try {
-					// 创建新文件
-					file.createNewFile();
-				} catch (IOException e) {
-					System.out.println("创建新文件时出现了错误。。。");
-					e.printStackTrace();
-				}
-			}
-			OutputStream os = new FileOutputStream(imagePath+File.separator+fileName);
-			// 开始读取
-			while ((len = instreams.read(bs)) != -1) {
-				os.write(bs, 0, len);
-			}
-			// 完毕，关闭所有链接
-			os.close();
-			instreams.close();
-			flag = true;
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return flag;
+	private String getAccessToken() {
+		RestTemplate restTemplate = new RestTemplate();
+		Map<String, String> params = new HashMap<>();
+		params.put("APPID", WxLoginContant.appId);
+		params.put("APPSECRET", WxLoginContant.secret);
+		ResponseEntity<String> responseEntity = restTemplate.getForEntity(
+				"https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={APPID}&secret={APPSECRET}",
+				String.class, params);
+		String body = responseEntity.getBody();
+		JSONObject object = JSON.parseObject(body);
+		return object.getString("access_token");
 	}
 
 	/**
