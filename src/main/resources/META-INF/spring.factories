@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.xueyu.controller.LoginController,\
-  com.xueyu.service.impl.LoginServiceImpl
+  com.xueyu.service.impl.LoginServiceImpl,\
+  com.xueyu.constant.WxLoginContant
   

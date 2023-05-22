@@ -13,3 +13,4 @@ file:
 login:
   appId: #小程序appid
   secret: #小程序密钥
+  authpage: pages/auth/auth #小程序认证界面,扫码后将跳转到这个界面

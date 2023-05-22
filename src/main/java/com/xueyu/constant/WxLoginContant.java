@@ -20,12 +20,21 @@ public class WxLoginContant {
 	 */
 	public static String secret;
 
-	public void setAppId(String APPID) {
-		appId = APPID;
+	/**
+	 * 小程序授权登录页面
+	 */
+	public static String authpage;
+
+	public void setAppId(String appId) {
+		WxLoginContant.appId = appId;
 	}
 
-	public void setSecret(String SECRET) {
-		secret = SECRET;
+	public void setSecret(String secret) {
+		WxLoginContant.secret = secret;
+	}
+
+	public void setAuthpage(String authpage) {
+		WxLoginContant.authpage = authpage;
 	}
 
 }

@@ -1,5 +1,6 @@
 package com.xueyu.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.xueyu.constant.ScanStatus;
 import com.xueyu.pojo.dto.Login;
@@ -36,8 +37,8 @@ public class LoginController {
 	 * @return 文件名
 	 */
 	@PostMapping("create")
-	public String createUserLogin(){
-		return loginService.createAndGetQrcodeFile();
+	public String createUserLogin() {
+		return loginService.saveQrcodeFileAndData();
 	}
 
 	/**
@@ -48,8 +49,8 @@ public class LoginController {
 	@PostMapping("scan")
 	public void userScanQrcode(Login login) {
 		login.setStatus(ScanStatus.ING.getStatus());
-		QueryWrapper<Login> wrapper = new QueryWrapper<>();
-		wrapper.eq("scene", login.getScene());
+		LambdaQueryWrapper<Login> wrapper = new LambdaQueryWrapper<>();
+		wrapper.eq(Login::getScene, login.getScene());
 		loginService.update(login, wrapper);
 	}
 

@@ -79,8 +79,45 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, Login> implements
 		return flag;
 	}
 
+	/**
+	 * 1. 带参数有限个数小程序码接口
+	 * 2. @param url
+	 * 3. @param access_token
+	 * 4. @param path
+	 * 5. @param width
+	 * 6. @return
+	 */
+	private static InputStream getwxacode(String accessToken, String scene) {
+		String url = "https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=" + accessToken;
+		JSONObject jsonParam = new JSONObject();
+		// 封装请求对象
+		// scene值
+		jsonParam.put("scene", scene);
+		// 跳往的小程序页面，一般为认证界面
+		jsonParam.put("page", WxLoginContant.authpage);
+		// 图片宽度，默认为 430
+		jsonParam.put("width", "430");
+		// 检测页面是否存在，默认为 true
+		jsonParam.put("check_path", true);
+		// 返回请求结果
+		return doWxPost(url, jsonParam);
+	}
+
 	@Override
-	public String createAndGetQrcodeFile() {
+	public String saveQrcodeFileAndData() {
+		// 保存数据
+		String fileName = saveQrcodeFile();
+		// 截取无后缀的文件名，即scene值
+		String scene = fileName.substring(0, 8);
+		// 2、数据库增加该项数据
+		Login login = new Login();
+		login.setScene(scene);
+		save(login);
+		return scene;
+	}
+
+	@Override
+	public String saveQrcodeFile() {
 		// 1、创建文件名及scene值
 		String scene = UUID.randomUUID().toString().substring(0, 8);
 		// 2、获取token
@@ -89,36 +126,7 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, Login> implements
 		// 3、请求图片流
 		InputStream inputStream = getwxacode(accessToken, scene);
 		// 4、保存图标文件
-		saveToImgByInputStream(inputStream, scene);
-		// 5、数据库增加该项数据
-		Login login = new Login();
-		login.setScene(scene);
-		save(login);
-		return scene;
-	}
-
-	/**
-	 1. 带参数有限个数小程序码接口
-	 2. @param url
-	 3. @param access_token
-	 4. @param path
-	 5. @param width
-	 6. @return
-	 */
-	private static InputStream getwxacode(String accessToken, String scene){
-		String url = "https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=" + accessToken;
-		JSONObject jsonParam = new JSONObject();
-		// 封装请求对象
-		// scene值
-		jsonParam.put("scene", scene);
-		// 跳往的小程序页面，一般为认证界面
-		jsonParam.put("page","pages/oauth/oauth");
-		// 图片宽度，默认为 430
-		jsonParam.put("width","430");
-		// 检测页面是否存在，默认为 true
-		jsonParam.put("check_path",true);
-		// 返回请求结果
-		return doWxPost(url, jsonParam);
+		return saveToImgByInputStream(inputStream, scene);
 	}
 
 	/**
@@ -145,10 +153,12 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, Login> implements
 	 * @param instreams 二进制流
 	 * @param fileName  图片的名称
 	 */
-	private void saveToImgByInputStream(InputStream instreams, String fileName) {
+	private String saveToImgByInputStream(InputStream instreams, String fileName) {
+		fileName = fileName + ".jpg";
 		if (instreams != null) {
-			boolean b = uploadImages(instreams, filepath, fileName + ".jpg");
+			boolean b = uploadImages(instreams, filepath, fileName);
 		}
+		return fileName;
 	}
 
 	/**
