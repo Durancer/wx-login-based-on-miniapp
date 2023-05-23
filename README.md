@@ -23,6 +23,7 @@
 
 将本项目 clone 或下载到本地打开后，执行 mvn install 命令，将项目 Jar 包安装到本地 maven 仓库
 
+![3E`Q5A%JY4G 82@0%BU8%ZY](https://github.com/Durancer/wx-login-based-on-miniapp/assets/102197880/57fc82fc-018f-4cb6-8400-59f3a7fe2f6a)
 
 
 在项目 pom 文件中添加
