@@ -114,6 +114,14 @@ public String createQrcode(){
 	 * @return 返回扫码图片名称 名称结构   scene + ".jpg"
 	 */
 	String saveQrcodeFile();
+
+	/**
+	 * 获取图片 inputStream流
+	 * 用户分布式文件存储系统，如 minIO、fastFDS等场景使用
+	 *
+	 * @return 图片 inputStream流
+	 */
+	InputStream getQrcdoeInputStream();
 ```
 
 **有侵入式**

@@ -3,6 +3,8 @@ package com.xueyu.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.xueyu.pojo.dto.Login;
 
+import java.io.InputStream;
+
 /**
  * @author durance
  */
@@ -23,5 +25,13 @@ public interface LoginService extends IService<Login> {
 	 * @return 返回扫码图片名称
 	 */
 	String saveQrcodeFile();
+
+	/**
+	 * 获取图片 inputStream流
+	 * 用户分布式文件存储系统，如 minIO、fastFDS等场景使用
+	 *
+	 * @return 图片 inputStream流
+	 */
+	InputStream getQrcdoeInputStream();
 
 }

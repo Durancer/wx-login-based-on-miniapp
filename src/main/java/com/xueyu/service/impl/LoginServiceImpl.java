@@ -79,6 +79,17 @@ public class LoginServiceImpl extends ServiceImpl<LoginMapper, Login> implements
 		return flag;
 	}
 
+	@Override
+	public InputStream getQrcdoeInputStream() {
+		// 1、创建文件名及scene值
+		String scene = UUID.randomUUID().toString().substring(0, 8);
+		// 2、获取token
+		String accessToken = getAccessToken();
+		log.info("accessToken = {}", accessToken);
+		// 3、请求图片流
+		return getwxacode(accessToken, scene);
+	}
+
 	/**
 	 * 1. 带参数有限个数小程序码接口
 	 * 2. @param url
